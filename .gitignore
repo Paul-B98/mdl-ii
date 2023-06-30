@@ -161,3 +161,6 @@ cython_debug/
 
 # Custom
 /src/data/cache
+*.amlignore*
+*.amltmp
+**/.ipynb_aml_checkpoints/*
