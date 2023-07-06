@@ -18,6 +18,25 @@ Als Basis für die Daten dient der Datensatz der [CodeSearchNet Challenge](https
 
 ## Evaluation
 
+Models:
+https://huggingface.co/SEBIS/code_trans_t5_small_code_documentation_generation_python
+https://huggingface.co/SEBIS/code_trans_t5_small_code_documentation_generation_python_transfer_learning_finetune
+https://huggingface.co/SEBIS/code_trans_t5_small_code_documentation_generation_python_multitask
+https://huggingface.co/SEBIS/code_trans_t5_small_code_documentation_generation_python_multitask_finetune
+
+https://huggingface.co/SEBIS/code_trans_t5_base_code_documentation_generation_python
+https://huggingface.co/SEBIS/code_trans_t5_base_code_documentation_generation_python_transfer_learning_finetune
+https://huggingface.co/SEBIS/code_trans_t5_base_code_documentation_generation_python_multitask
+https://huggingface.co/SEBIS/code_trans_t5_base_code_documentation_generation_python_multitask_finetune
+
+https://huggingface.co/SEBIS/code_trans_t5_large_code_documentation_generation_python_transfer_learning_finetune
+https://huggingface.co/SEBIS/code_trans_t5_large_code_documentation_generation_python_multitask
+https://huggingface.co/SEBIS/code_trans_t5_large_code_documentation_generation_python_multitask_finetune
+
+https://huggingface.co/Salesforce/codet5-base-codexglue-sum-python
+https://huggingface.co/Salesforce/codet5-base-multi-sum
+
+
 ## Installation
 
 ```bash
@@ -26,4 +45,5 @@ pip install -q -U git+https://github.com/Paul-B98/CodeTF.git
 pip install -q -U git+https://github.com/huggingface/transformers.git
 pip install -q -U git+https://github.com/huggingface/peft.git
 pip install -q -U git+https://github.com/huggingface/accelerate.git
+pip install sentencepiece matplotlib
 ```
