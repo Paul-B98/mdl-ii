@@ -28,7 +28,7 @@ Bei der Evaluation werden die erstellten Modelle  mit den Modellen von Salesforc
 
 Die Evaluation wurde auf einem System mit einer Nvidia RTX 4070 Ti als GPU und einem Ryzen 9 7900X als CPU durchgeführt. Alternativ kam ein System mit einem Intel Xeon E5-2690v3 als CPU und einer Nvidia Tesla K80 zum Einsatz. Bei dem für die Evaluation verwendeten Datensatz handelt es sich um den Testdatensatz des CodeSeachNet Datensatzes. Dieser umfasst in der aufbereiteten Form ungefähr 15.000 Daten [^1]. 
 
-| Modell | BLEU[^9] [^90] | TER[^10] | chrF[^11] [^111] | Rouge1[^12] | RougeL[^13] | Laufzeit |
+| Modell | BLEU[^9] [^90] | TER[^10] | chrF[^11] [^110] | Rouge1[^12] | RougeL[^13] | Laufzeit |
 | ------ | ---- | --- | ---- | ------ | ------ | -------- |
 | CodeT5-base-sum-python[^14] | 23.564 |  93.313 | 39.069 | 0.489 | 0.462 | 0.105 ±0.001 |
 | CodeT5-base-multi-sum[^15]  | 23.985 |  88.667 | 39.318 | 0.491 | 0.463 | 0.106 ±0.001 |
