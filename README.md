@@ -24,23 +24,27 @@ Im Zusammenhang mit dieser Fallstudie wurde das CodeT5+ Modell mit 220 Millionen
 
 ## Evaluation
 
-Models:
-https://huggingface.co/SEBIS/code_trans_t5_small_code_documentation_generation_python
-https://huggingface.co/SEBIS/code_trans_t5_small_code_documentation_generation_python_transfer_learning_finetune
-https://huggingface.co/SEBIS/code_trans_t5_small_code_documentation_generation_python_multitask
-https://huggingface.co/SEBIS/code_trans_t5_small_code_documentation_generation_python_multitask_finetune
+Bei der Evaluation werden die erstellten Modelle  mit den Modellen von Salesforce und dem Software Engineering for Business Information Systems (SEBIS) Fachbereich der TU München verglichen. Bei den Salesforce Modellen wird ein spezialisiertes CodeT5 als Model verwendet. Hingegen wird vom SEBIS nur T5 als Basismodell verwendet. [^6] [^8]
 
-https://huggingface.co/SEBIS/code_trans_t5_base_code_documentation_generation_python
-https://huggingface.co/SEBIS/code_trans_t5_base_code_documentation_generation_python_transfer_learning_finetune
-https://huggingface.co/SEBIS/code_trans_t5_base_code_documentation_generation_python_multitask
-https://huggingface.co/SEBIS/code_trans_t5_base_code_documentation_generation_python_multitask_finetune
+Die Evaluation wurde auf einem System mit einer Nvidia RTX 4070 Ti als GPU und einem Ryzen 9 7900X als CPU durchgeführt. Alternativ kam ein System mit einem Intel Xeon E5-2690v3 als CPU und einer Nvidia Tesla K80 zum Einsatz. Bei dem für die Evaluation verwendeten Datensatz handelt es sich um den Testdatensatz des CodeSeachNet Datensatzes. Dieser umfasst in der aufbereiteten Form ungefähr 15.000 Daten [^1]. 
 
-https://huggingface.co/SEBIS/code_trans_t5_large_code_documentation_generation_python_transfer_learning_finetune
-https://huggingface.co/SEBIS/code_trans_t5_large_code_documentation_generation_python_multitask
-https://huggingface.co/SEBIS/code_trans_t5_large_code_documentation_generation_python_multitask_finetune
+| Modell | BLEU[^9] [^90] | TER[^10] | chrF[^11] [^111] | Rouge1[^12] | RougeL[^13] | Laufzeit |
+| ------ | ---- | --- | ---- | ------ | ------ | -------- |
+| CodeT5-base-sum-python[^14] |  |  |  |  |  |  |
+| CodeT5-base-multi-sum[^15] |  |  |  |  |  |  |
+| Code-Trans-S-ST[^16] |  |  |  |  |  |  |
+| Code-Trans-S-TF[^17] |  |  |  |  |  |  |
+| Code-Trans-S-MT[^18] |  |  |  |  |  |  |
+| Code-Trans-S-MT-TF[^19] |  |  |  |  |  |  |
+| Code-Trans-B-ST[^10] |  |  |  |  |  |  |
+| Code-Trans-B-TF[^21] |  |  |  |  |  |  |
+| Code-Trans-B-MT[^22] |  |  |  |  |  |  |
+| Code-Trans-B-MT-TF[^23] |  |  |  |  |  |  |
+| Code-Trans-L-TF[^24] |  |  |  |  |  |  |
+| Code-Trans-L-MT[^25] |  |  |  |  |  |  |
+| Code-Trans-L-MT-TF[^26] |  |  |  |  |  |  |
+| Fine Tuned CodeT5+ 220m* |  |  |  |  |  |  |
 
-https://huggingface.co/Salesforce/codet5-base-codexglue-sum-python
-https://huggingface.co/Salesforce/codet5-base-multi-sum
 
 
 ## Installation
@@ -88,17 +92,17 @@ pip install salesforce-codetf sentencepiece matplotlib
 }
 
 @article{DBLP:journals/corr/abs-1910-10683,
-  author={Colin Raffel and Noam Shazeer and Adam Roberts and Katherine Lee and Sharan Narang and Michael Matena and Yanqi Zhou and Wei Li and Peter J. Liu},
-  title={Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer},
-  journal={CoRR},
-  volume={abs/1910.10683},
-  year={2019},
-  url={http://arxiv.org/abs/1910.10683},
-  eprinttype={arXiv},
-  eprint={1910.10683},
-  timestamp={Fri, 05 Feb 2021 15:43:41 +0100},
-  biburl={https://dblp.org/rec/journals/corr/abs-1910-10683.bib},
-  bibsource={dblp computer science bibliography, https://dblp.org}
+    author={Colin Raffel and Noam Shazeer and Adam Roberts and Katherine Lee and Sharan Narang and Michael Matena and Yanqi Zhou and Wei Li and Peter J. Liu},
+    title={Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer},
+    journal={CoRR},
+    volume={abs/1910.10683},
+    year={2019},
+    url={http://arxiv.org/abs/1910.10683},
+    eprinttype={arXiv},
+    eprint={1910.10683},
+    timestamp={Fri, 05 Feb 2021 15:43:41 +0100},
+    biburl={https://dblp.org/rec/journals/corr/abs-1910-10683.bib},
+    bibsource={dblp computer science bibliography, https://dblp.org}
 }
 
 @misc{wang2021codet5,
@@ -111,13 +115,108 @@ pip install salesforce-codetf sentencepiece matplotlib
 }
 
 @misc{wang2023codet5,
-      title={CodeT5+: Open Code Large Language Models for Code Understanding and Generation}, 
-      author={Yue Wang and Hung Le and Akhilesh Deepak Gotmare and Nghi D. Q. Bui and Junnan Li and Steven C. H. Hoi},
-      year={2023},
-      eprint={2305.07922},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
+    title={CodeT5+: Open Code Large Language Models for Code Understanding and Generation}, 
+    author={Yue Wang and Hung Le and Akhilesh Deepak Gotmare and Nghi D. Q. Bui and Junnan Li and Steven C. H. Hoi},
+    year={2023},
+    eprint={2305.07922},
+    archivePrefix={arXiv},
+    primaryClass={cs.CL}
 }
+
+@misc{elnaggar2021codetrans,
+    title={CodeTrans: Towards Cracking the Language of Silicon's Code Through Self-Supervised Deep Learning and High Performance Computing}, 
+    author={Ahmed Elnaggar and Wei Ding and Llion Jones and Tom Gibbs and Tamas Feher and Christoph Angerer and Silvia Severini and Florian Matthes and Burkhard Rost},
+    year={2021},
+    eprint={2104.02443},
+    archivePrefix={arXiv},
+    primaryClass={cs.SE}
+}
+
+@inproceedings{lin-hovy-2003-automatic,
+    title="Automatic Evaluation of Summaries Using N-gram Co-occurrence Statistics",
+    author="Lin, Chin-Yew  and Hovy, Eduard",
+    booktitle="Proceedings of the 2003 Human Language Technology Conference of the North {A}merican Chapter of the Association for Computational Linguistics",
+    year="2003",
+    url="https://aclanthology.org/N03-1020",
+    pages="150--157",
+}
+
+@inproceedings{lin-och-2004-automatic,
+    title="Automatic Evaluation of Machine Translation Quality Using Longest Common Subsequence and Skip-Bigram Statistics",
+    author="Lin, Chin-Yew  and Och, Franz Josef",
+    booktitle="Proceedings of the 42nd Annual Meeting of the Association for Computational Linguistics ({ACL}-04)",
+    month=jul,
+    year="2004",
+    address="Barcelona, Spain",
+    url="https://aclanthology.org/P04-1077",
+    doi="10.3115/1218955.1219032",
+    pages="605--612",
+}
+
+@inproceedings{10.3115/1073083.1073135,
+    author={Papineni, Kishore and Roukos, Salim and Ward, Todd and Zhu, Wei-Jing},
+    title={BLEU: A Method for Automatic Evaluation of Machine Translation},
+    year={2002},
+    publisher={Association for Computational Linguistics},
+    address={USA},
+    url={https://doi.org/10.3115/1073083.1073135},
+    doi={10.3115/1073083.1073135},
+    abstract={Human evaluations of machine translation are extensive but expensive. Human evaluations can take months to finish and involve human labor that can not be reused. We propose a method of automatic machine translation evaluation that is quick, inexpensive, and language-independent, that correlates highly with human evaluation, and that has little marginal cost per run. We present this method as an automated understudy to skilled human judges which substitutes for them when there is need for quick or frequent evaluations.},
+    booktitle={Proceedings of the 40th Annual Meeting on Association for Computational Linguistics},
+    pages={311–318},
+    numpages={8},
+    location={Philadelphia, Pennsylvania},
+    series={ACL '02}
+}
+
+@inproceedings{popovic-2015-chrf,
+    title = "chr{F}: character n-gram {F}-score for automatic {MT} evaluation",
+    author = "Popovi{\'c}, Maja",
+    booktitle = "Proceedings of the Tenth Workshop on Statistical Machine Translation",
+    month = sep,
+    year = "2015",
+    address = "Lisbon, Portugal",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/W15-3049",
+    doi = "10.18653/v1/W15-3049",
+    pages = "392--395",
+}
+
+@inproceedings{popovic-2017-chrf,
+    title = "chr{F}++: words helping character n-grams",
+    author = "Popovi{\'c}, Maja",
+    booktitle = "Proceedings of the Second Conference on Machine Translation",
+    month = sep,
+    year = "2017",
+    address = "Copenhagen, Denmark",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/W17-4770",
+    doi = "10.18653/v1/W17-4770",
+    pages = "612--618",
+}
+
+@misc{post2018clarity,
+    title={A Call for Clarity in Reporting BLEU Scores}, 
+    author={Matt Post},
+    year={2018},
+    eprint={1804.08771},
+    archivePrefix={arXiv},
+    primaryClass={cs.CL}
+}
+
+@inproceedings{snover-etal-2006-study,
+    title = "A Study of Translation Edit Rate with Targeted Human Annotation",
+    author = "Snover, Matthew  and Dorr, Bonnie  and Schwartz, Rich  and Micciulla, Linnea  and Makhoul, John",
+    booktitle = "Proceedings of the 7th Conference of the Association for Machine Translation in the Americas: Technical Papers",
+    month = aug # " 8-12",
+    year = "2006",
+    address = "Cambridge, Massachusetts, USA",
+    publisher = "Association for Machine Translation in the Americas",
+    url = "https://aclanthology.org/2006.amta-papers.25",
+    pages = "223--231",
+    abstract = "We examine a new, intuitive measure for evaluating machine-translation output that avoids the knowledge intensiveness of more meaning-based approaches, and the labor-intensiveness of human judgments. Translation Edit Rate (TER) measures the amount of editing that a human would have to perform to change a system output so it exactly matches a reference translation. We show that the single-reference variant of TER correlates as well with human judgments of MT quality as the four-reference variant of BLEU. We also define a human-targeted TER (or HTER) and show that it yields higher correlations with human judgments than BLEU{---}even when BLEU is given human-targeted references. Our results indicate that HTER correlates with human judgments better than HMETEOR and that the four-reference variants of TER and HTER correlate with human judgments as well as{---}or better than{---}a second human judgment does.",
+}
+
 
 
 ```
@@ -130,9 +229,40 @@ pip install salesforce-codetf sentencepiece matplotlib
 [^5]: Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer
 [^6]: CodeT5: Identifier-aware Unified Pre-trained Encoder-Decoder Models for Code Understanding and Generation
 [^7]: CodeT5+: Open Code Large Language Models for Code Understanding and Generation
-[^]:
-[^]:
-[^]:
-[^]:
-[^]:
+[^8]: CodeTrans: Towards Cracking the Language of Silicon's Code Through Self-Supervised Deep Learning and High Performance Computing
+[^9]: BLEU: A Method for Automatic Evaluation of Machine Translation
+[^90]: A Call for Clarity in Reporting BLEU Scores
+[^10]: A Study of Translation Edit Rate with Targeted Human Annotation
+[^11]: chrF: character n-gram F-score for automatic MT evaluation
+[^110]: chrF++: words helping character n-grams
+[^12]: Automatic Evaluation of Summaries Using N-gram Co-occurrence Statistics
+[^13]: Automatic Evaluation of Machine Translation Quality Using Longest Common Subsequence and Skip-Bigram Statistics
+[^14]: https://huggingface.co/Salesforce/codet5-base-codexglue-sum-python
+[^15]: https://huggingface.co/Salesforce/codet5-base-multi-sum
+[^16]: https://huggingface.co/SEBIS/code_trans_t5_small_code_documentation_generation_python
+[^17]: https://huggingface.co/SEBIS/code_trans_t5_small_code_documentation_generation_python_transfer_learning_finetune
+[^18]: https://huggingface.co/SEBIS/code_trans_t5_small_code_documentation_generation_python_multitask
+[^19]: https://huggingface.co/SEBIS/code_trans_t5_small_code_documentation_generation_python_multitask_finetune
+[^20]: https://huggingface.co/SEBIS/code_trans_t5_base_code_documentation_generation_python
+[^21]: https://huggingface.co/SEBIS/code_trans_t5_base_code_documentation_generation_python_transfer_learning_finetune
+[^22]: https://huggingface.co/SEBIS/code_trans_t5_base_code_documentation_generation_python_multitask
+[^23]: https://huggingface.co/SEBIS/code_trans_t5_base_code_documentation_generation_python_multitask_finetune
+[^24]: https://huggingface.co/SEBIS/code_trans_t5_large_code_documentation_generation_python_transfer_learning_finetune
+[^25]: https://huggingface.co/SEBIS/code_trans_t5_large_code_documentation_generation_python_multitask
+[^26]: https://huggingface.co/SEBIS/code_trans_t5_large_code_documentation_generation_python_multitask_finetune
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
