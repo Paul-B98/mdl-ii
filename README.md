@@ -30,20 +30,20 @@ Die Evaluation wurde auf einem System mit einer Nvidia RTX 4070 Ti als GPU und e
 
 | Modell | BLEU[^9] [^90] | TER[^10] | chrF[^11] [^111] | Rouge1[^12] | RougeL[^13] | Laufzeit |
 | ------ | ---- | --- | ---- | ------ | ------ | -------- |
-| CodeT5-base-sum-python[^14] |  |  |  |  |  |  |
-| CodeT5-base-multi-sum[^15] |  |  |  |  |  |  |
-| Code-Trans-S-ST[^16] |  |  |  |  |  |  |
-| Code-Trans-S-TF[^17] |  |  |  |  |  |  |
-| Code-Trans-S-MT[^18] |  |  |  |  |  |  |
-| Code-Trans-S-MT-TF[^19] |  |  |  |  |  |  |
-| Code-Trans-B-ST[^10] |  |  |  |  |  |  |
-| Code-Trans-B-TF[^21] |  |  |  |  |  |  |
-| Code-Trans-B-MT[^22] |  |  |  |  |  |  |
-| Code-Trans-B-MT-TF[^23] |  |  |  |  |  |  |
-| Code-Trans-L-TF[^24] |  |  |  |  |  |  |
-| Code-Trans-L-MT[^25] |  |  |  |  |  |  |
-| Code-Trans-L-MT-TF[^26] |  |  |  |  |  |  |
-| Fine Tuned CodeT5+ 220m* |  |  |  |  |  |  |
+| CodeT5-base-sum-python[^14] | 23.564 |  93.313 | 39.069 | 0.489 | 0.462 | 0.105 ±0.001 |
+| CodeT5-base-multi-sum[^15]  | 23.985 |  88.667 | 39.318 | 0.491 | 0.463 | 0.106 ±0.001 |
+| Code-Trans-S-ST[^16]        |  5.495 | 103.981 | 25.007 | 0.287 | 0.256 | 0.078 ±0.002 |
+| Code-Trans-S-TF[^17]        | 21.093 |  71.626 | 37.157 | 0.476 | 0.448 | 0.039 ±0.000 |
+| Code-Trans-S-MT[^18]        |  5.450 |  89.910 | 20.280 | 0.295 | 0.276 | 0.030 ±0.001 |
+| Code-Trans-S-MT-TF[^19]     | 16.378 |  76.738 | 34.692 | 0.452 | 0.421 | 0.025 ±0.001 |
+| Code-Trans-B-ST[^10]        |  4.638 | 102.021 | 23.194 | 0.263 | 0.234 | 0.083 ±0.002 |
+| Code-Trans-B-TF[^21]        | 21.671 |  71.560 | 37.954 | 0.485 | 0.457 | 0.035 ±0.000 |
+| Code-Trans-B-MT[^22]        |  2.957 |  93.160 | 15.566 | 0.221 | 0.208 | 0.038 ±0.001 |
+| Code-Trans-B-MT-TF[^23]     | 13.766 |  78.742 | 33.452 | 0.443 | 0.410 | 0.057 ±0.001 |
+| Code-Trans-L-TF[^24]        | 23.306 |  69.745 | 38.984 | 0.497 | 0.470 | 0.102 ±0.001 |
+| Code-Trans-L-MT[^25]        | 13.487 |  79.615 | 32.527 | 0.433 | 0.401 | 0.089 ±0.002 |
+| Code-Trans-L-MT-TF[^26]     | 16.362 |  80.671 | 35.033 | 0.445 | 0.412 | 0.124 ±0.001 |
+| **Fine Tuned CodeT5+ 220m***| 25.245 |  40.596 | 66.514 | 0.515 | 0.488 | 0.110 ±0.000 |
 
 
 
@@ -216,9 +216,6 @@ pip install salesforce-codetf sentencepiece matplotlib
     pages = "223--231",
     abstract = "We examine a new, intuitive measure for evaluating machine-translation output that avoids the knowledge intensiveness of more meaning-based approaches, and the labor-intensiveness of human judgments. Translation Edit Rate (TER) measures the amount of editing that a human would have to perform to change a system output so it exactly matches a reference translation. We show that the single-reference variant of TER correlates as well with human judgments of MT quality as the four-reference variant of BLEU. We also define a human-targeted TER (or HTER) and show that it yields higher correlations with human judgments than BLEU{---}even when BLEU is given human-targeted references. Our results indicate that HTER correlates with human judgments better than HMETEOR and that the four-reference variants of TER and HTER correlate with human judgments as well as{---}or better than{---}a second human judgment does.",
 }
-
-
-
 ```
 
 ## footnotes
@@ -250,19 +247,3 @@ pip install salesforce-codetf sentencepiece matplotlib
 [^24]: https://huggingface.co/SEBIS/code_trans_t5_large_code_documentation_generation_python_transfer_learning_finetune
 [^25]: https://huggingface.co/SEBIS/code_trans_t5_large_code_documentation_generation_python_multitask
 [^26]: https://huggingface.co/SEBIS/code_trans_t5_large_code_documentation_generation_python_multitask_finetune
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
