@@ -50,30 +50,30 @@ pip install salesforce-codetf sentencepiece matplotlib
 # Resources
 
 [^1]: 
-    ```bibtex
-    @article{DBLP:journals/corr/abs-1909-09436,
-        author={Hamel Husain and Ho{-}Hsiang Wu and Tiferet Gazit and Miltiadis Allamanis and Marc Brockschmidt},
-        title={CodeSearchNet Challenge: Evaluating the State of Semantic Code Search},
-        journal={CoRR},
-        volume={abs/1909.09436},
-        year={2019},
-        url={http://arxiv.org/abs/1909.09436},
-        eprinttype={arXiv},
-        eprint={1909.09436},
-        timestamp={Tue, 24 Sep 2019 11:33:51 +0200},
-        biburl={https://dblp.org/rec/journals/corr/abs-1909-09436.bib},
-        bibsource={dblp computer science bibliography, https://dblp.org}
-    }
-    ```
+  ```bibtex
+  @article{DBLP:journals/corr/abs-1909-09436,
+      author={Hamel Husain and Ho{-}Hsiang Wu and Tiferet Gazit and Miltiadis Allamanis and Marc Brockschmidt},
+      title={CodeSearchNet Challenge: Evaluating the State of Semantic Code Search},
+      journal={CoRR},
+      volume={abs/1909.09436},
+      year={2019},
+      url={http://arxiv.org/abs/1909.09436},
+      eprinttype={arXiv},
+      eprint={1909.09436},
+      timestamp={Tue, 24 Sep 2019 11:33:51 +0200},
+      biburl={https://dblp.org/rec/journals/corr/abs-1909-09436.bib},
+      bibsource={dblp computer science bibliography, https://dblp.org}
+  }
+  ```
 
 [^2]: 
-    ```bibtex
-    @misc{lu2021codexglue,
-        title={CodeXGLUE: A Machine Learning Benchmark Dataset for Code Understanding and Generation}, 
-        author={Shuai Lu and Daya Guo and Shuo Ren and Junjie Huang and Alexey Svyatkovskiy and Ambrosio Blanco and Colin Clement and Dawn Drain and Daxin Jiang and Duyu Tang and Ge Li and Lidong Zhou and Linjun Shou and Long Zhou and Michele Tufano and Ming Gong and Ming Zhou and Nan Duan and Neel Sundaresan and Shao Kun Deng and Shengyu Fu and Shujie Liu},
-        year={2021},
-        eprint={2102.04664},
-        archivePrefix={arXiv},
-        primaryClass={cs.SE}
-    }
-    ```
+  ```bibtex
+  @misc{lu2021codexglue,
+      title={CodeXGLUE: A Machine Learning Benchmark Dataset for Code Understanding and Generation}, 
+      author={Shuai Lu and Daya Guo and Shuo Ren and Junjie Huang and Alexey Svyatkovskiy and Ambrosio Blanco and Colin Clement and Dawn Drain and Daxin Jiang and Duyu Tang and Ge Li and Lidong Zhou and Linjun Shou and Long Zhou and Michele Tufano and Ming Gong and Ming Zhou and Nan Duan and Neel Sundaresan and Shao Kun Deng and Shengyu Fu and Shujie Liu},
+      year={2021},
+      eprint={2102.04664},
+      archivePrefix={arXiv},
+      primaryClass={cs.SE}
+  }
+  ```
