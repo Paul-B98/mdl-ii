@@ -20,7 +20,7 @@ Zusätzlich zu dem Entfernen von nicht benötigten Features wurde ebenfalls Date
 
 Im Rahmen des Modellings werden Techniken aus dem Natural Language Processings zum Einsatz kommen. Zusätzlich wird das Transferlernen mittels vortrainierter Modelle umgesetzt. Die verwendeten Modelle werden dabei im Einzelnen in dem Modellierungsabschnitt erläutert. Zum Durchführen der Arbeit wird auf die Bibliothek CodeTF zurückgegriffen, an der im Laufe der Fallstudie mitgearbeitet wurde [^4].
 
-Im Zusammenhang mit dieser Fallstudie wurde das CodeT5+ Modell mit 220 Millionen Parameter verwendet, um ein Fine Tuning durchzuführen. Dabei wurde sich aufgrund von Speicher- sowie zeitlichen Limitierungen für das Modell entscheiden. Dieses Modell wurde dann mittels des aufbereiteten CodeSearchNet Datensatz für zwei Epochen mit einer Nvidia Tesla K80 asl GPU weiter trainiert. Das Training wurde mit Standardparametern durchgeführt. Nur die Epochen wurden auf zwei reduziert, um die Trainingszeit auf ungefähr 26 Stunden zu reduzieren. [^5] [^6] [^7] 
+Im Zusammenhang mit dieser Fallstudie wurde das CodeT5+ Modell mit 220 Millionen Parameter verwendet, um ein Fine Tuning durchzuführen. Dabei wurde sich aufgrund von Speicher- sowie zeitlichen Limitierungen für das Modell entscheiden. Dieses Modell wurde dann mittels des aufbereiteten CodeSearchNet Datensatz für zwei Epochen mit einer Nvidia Tesla K80 als GPU weiter trainiert. Das Training wurde mit Standardparametern durchgeführt. Nur die Epochen wurden auf zwei reduziert, um die Trainingszeit auf ungefähr 26 Stunden zu reduzieren. [^5] [^6] [^7] 
 
 ## Evaluation
 
