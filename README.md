@@ -22,6 +22,8 @@ Im Rahmen des Modellings werden Techniken aus dem Natural Language Processings z
 
 Im Zusammenhang mit dieser Fallstudie wurde das CodeT5+ Modell mit 220 Millionen Parameter verwendet, um ein Fine Tuning durchzuführen. Dabei wurde sich aufgrund von Speicher- sowie zeitlichen Limitierungen für das Modell entscheiden. Dieses Modell wurde dann mittels des aufbereiteten CodeSearchNet Datensatz für zwei Epochen mit einer Nvidia Tesla K80 als GPU weiter trainiert. Das Training wurde mit Standardparametern durchgeführt. Nur die Epochen wurden auf zwei reduziert, um die Trainingszeit auf ungefähr 26 Stunden zu reduzieren. [^5] [^6] [^7] 
 
+Das Model kann von [Hugging Face](https://huggingface.co/Paul-B98/codet5p_220m_py_sum) heruntergeladen werden.
+
 ## Evaluation
 
 Bei der Evaluation werden die erstellten Modelle  mit den Modellen von Salesforce und dem Software Engineering for Business Information Systems (SEBIS) Fachbereich der TU München verglichen. Bei den Salesforce Modellen wird ein spezialisiertes CodeT5 als Model verwendet. Hingegen wird vom SEBIS nur T5 als Basismodell verwendet. [^6] [^8]
